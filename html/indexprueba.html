@@ -287,10 +287,6 @@
                             <li>Estructuras de datos</li>
                         </ul>
 
-                        <a href="#">
-                            Ver proyecto
-                        </a>
-
                     </div>
 
                 </article>
@@ -316,10 +312,6 @@
                             <li>Base de datos</li>
                         </ul>
 
-                        <a href="#">
-                            Ver proyecto
-                        </a>
-
                     </div>
 
                 </article>
@@ -344,10 +336,6 @@
                             <li>Google Sheets</li>
                             <li>IA</li>
                         </ul>
-
-                        <a href="#">
-                            Ver proyecto
-                        </a>
 
                     </div>
 
@@ -409,6 +397,23 @@
         </div>
 
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const themeIcon = themeToggle.querySelector("i");
+
+        themeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            if (document.body.classList.contains("light-mode")) {
+                themeIcon.classList.remove("fa-moon");
+                themeIcon.classList.add("fa-sun");
+            } else {
+                themeIcon.classList.remove("fa-sun");
+                themeIcon.classList.add("fa-moon");
+            }
+        });
+    </script>
 
 </body>
 
