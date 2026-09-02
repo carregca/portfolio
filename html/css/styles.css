@@ -4,14 +4,26 @@
     box-sizing: border-box; 
 } 
  
+:root {
+    --color-fondo: #080808;
+    --color-fondo-secundario: #0d0d0d;
+    --color-fondo-hover: #151515;
+    --color-principal: #ffffff;
+    --color-texto: #eeeeee;
+    --color-texto-secundario: #707070;
+    --color-texto-terciario: #555555;
+    --color-borde: #282828;
+    --color-borde-claro: #303030;
+}
+
 html { 
     scroll-behavior: smooth; 
 } 
  
 body { 
     font-family: "Inter", sans-serif; 
-    background: #050505; 
-    color: #eeeeee; 
+    background: var(--color-fondo); 
+    color: var(--color-texto); 
     line-height: 1.6; 
  
     background-image: 
@@ -62,7 +74,7 @@ header {
     background: rgba(5, 5, 5, 0.88); 
     backdrop-filter: blur(14px); 
  
-    border-bottom: 1px solid #252525; 
+    border-bottom: 1px solid var(--color-borde); 
 } 
  
 header::after { 
@@ -75,7 +87,7 @@ header::after {
     width: 120px; 
     height: 2px; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
 } 
  
 .navbar { 
@@ -92,7 +104,7 @@ header::after {
 .logo { 
     position: relative; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-family: "Space Mono", monospace; 
     font-size: 23px; 
@@ -112,7 +124,7 @@ header::after {
     width: 5px; 
     height: 5px; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
 } 
  
 .logo:hover { 
@@ -129,7 +141,7 @@ header::after {
 .nav-links a { 
     position: relative; 
  
-    color: #707070; 
+    color: var(--color-principal); 
  
     font-family: "Space Mono", monospace; 
     font-size: 10px; 
@@ -151,13 +163,13 @@ header::after {
     width: 0; 
     height: 1px; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
  
     transition: 0.3s; 
 } 
  
 .nav-links a:hover { 
-    color: #ffffff; 
+    color: var(--color-principal); 
 } 
  
 .nav-links a:hover::before { 
@@ -170,11 +182,14 @@ header::after {
     width: 40px; 
     height: 40px; 
  
-    border: 1px solid #333333; 
-    border-radius: 0; 
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 0;
+    background: var(--color-fondo-secundario);
+    color: var(--color-principal); 
+     
  
     background: #0c0c0c; 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     cursor: pointer; 
  
@@ -191,12 +206,12 @@ header::after {
     width: 8px; 
     height: 8px; 
  
-    border-top: 1px solid #ffffff; 
-    border-left: 1px solid #ffffff; 
+    border-top: 1px solid var(--color-principal); 
+    border-left: 1px solid var(--color-principal); 
 } 
  
 .theme-button:hover { 
-    background: #ffffff; 
+    background: var(--color-principal); 
     color: #050505; 
  
     transform: rotate(5deg); 
@@ -297,13 +312,13 @@ header::after {
 .hero-content > p:first-child::before { 
     content: "01 / "; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
 } 
  
 .hero h1 { 
     max-width: 1200px; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-size: clamp(70px, 12vw, 175px); 
     font-weight: 900; 
@@ -319,7 +334,7 @@ header::after {
 .hero h1::after { 
     content: "."; 
  
-    color: #555555; 
+    color: var(--color-texto-terciario); 
 } 
  
 .hero h1::before { 
@@ -333,7 +348,7 @@ header::after {
     width: 85px; 
     height: 3px; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
  
     transform: skewX(-30deg); 
 } 
@@ -353,13 +368,13 @@ header::after {
 .hero-content > p:not(:first-child) { 
     max-width: 560px; 
  
-    color: #707070; 
+    color: var(--color-texto-secundario); 
  
     font-size: 14px; 
  
     margin-bottom: 40px; 
  
-    border-left: 2px solid #ffffff; 
+    border-left: 2px solid var(--color-principal); 
     padding-left: 20px; 
 } 
  
@@ -373,7 +388,7 @@ header::after {
 .button { 
     padding: 15px 28px; 
  
-    background: #eeeeee; 
+    background: var(--color-texto); 
     color: #050505; 
  
     font-family: "Space Mono", monospace; 
@@ -387,7 +402,7 @@ header::after {
 } 
  
 .button:hover { 
-    background: #ffffff; 
+    background: var(--color-principal); 
  
     transform: translate(-3px, -3px); 
  
@@ -396,16 +411,16 @@ header::after {
  
 .hero-buttons .button:nth-child(2) { 
     background: transparent; 
-    color: #eeeeee; 
+    color: var(--color-texto); 
  
     border: 1px solid #3a3a3a; 
 } 
  
 .hero-buttons .button:nth-child(2):hover { 
-    background: #eeeeee; 
+    background: var(--color-texto); 
     color: #050505; 
  
-    border-color: #eeeeee; 
+    border-color: var(--color-texto); 
 } 
  
 .social-links { 
@@ -432,7 +447,7 @@ header::after {
 } 
  
 .social-links a:hover { 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     transform: translateX(5px); 
 } 
@@ -445,7 +460,7 @@ header::after {
 } 
  
 .section > h2 { 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-size: clamp(45px, 7vw, 90px); 
     font-weight: 900; 
@@ -474,7 +489,7 @@ header::after {
  
     margin-left: 15px; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
  
     transform: skewX(-30deg); 
 } 
@@ -482,7 +497,7 @@ header::after {
 .section > p { 
     max-width: 600px; 
  
-    color: #707070; 
+    color: var(--color-texto-secundario); 
  
     font-size: 14px; 
  
@@ -498,7 +513,7 @@ header::after {
  
     gap: 80px; 
  
-    border-top: 1px solid #282828; 
+    border-top: 1px solid var(--color-borde); 
     padding-top: 55px; 
  
     position: relative; 
@@ -544,7 +559,7 @@ header::after {
 .about-text h3 { 
     max-width: 700px; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-size: 36px; 
     line-height: 1; 
@@ -568,13 +583,13 @@ header::after {
     display: grid; 
     grid-template-columns: 1fr 1fr; 
  
-    border-top: 1px solid #282828; 
+    border-top: 1px solid var(--color-borde); 
 } 
  
 .about-text li { 
     padding: 18px 15px; 
  
-    border-bottom: 1px solid #282828; 
+    border-bottom: 1px solid var(--color-borde); 
  
     color: #999999; 
  
@@ -587,20 +602,20 @@ header::after {
 } 
  
 .about-text li:nth-child(odd) { 
-    border-right: 1px solid #282828; 
+    border-right: 1px solid var(--color-borde); 
 } 
  
 .about-text li::before { 
     content: "→"; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     margin-right: 10px; 
 } 
  
 .about-text li:hover { 
     background: #0d0d0d; 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     padding-left: 22px; 
 } 
@@ -611,9 +626,9 @@ header::after {
  
     gap: 1px; 
  
-    background: #303030; 
+    background: var(--color-borde-claro); 
  
-    border: 1px solid #303030; 
+    border: 1px solid var(--color-borde-claro); 
 } 
  
 .skill-card { 
@@ -624,7 +639,7 @@ header::after {
     position: relative; 
     overflow: hidden; 
  
-    background: #090909; 
+    background: var(--color-fondo-secundario); 
  
     transition: 0.35s; 
 } 
@@ -640,8 +655,8 @@ header::after {
     width: 35px; 
     height: 35px; 
  
-    border-top: 1px solid #555555; 
-    border-right: 1px solid #555555; 
+    border-top: 1px solid var(--color-texto-terciario); 
+    border-right: 1px solid var(--color-texto-terciario); 
  
     transition: 0.3s; 
 } 
@@ -679,13 +694,13 @@ header::after {
     width: 55px; 
     height: 55px; 
  
-    border-color: #ffffff; 
+    border-color: var(--color-principal); 
 } 
  
 .skill-card i { 
     display: block; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-size: 29px; 
  
@@ -693,7 +708,7 @@ header::after {
 } 
  
 .skill-card h3 { 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-family: "Space Mono", monospace; 
     font-size: 16px; 
@@ -714,7 +729,7 @@ header::after {
     display: flex; 
     flex-direction: column; 
  
-    border-top: 1px solid #282828; 
+    border-top: 1px solid var(--color-borde); 
 } 
  
 .project-card { 
@@ -723,7 +738,7 @@ header::after {
     display: grid; 
     grid-template-columns: 42% 1fr; 
  
-    border-bottom: 1px solid #282828; 
+    border-bottom: 1px solid var(--color-borde); 
  
     position: relative; 
     overflow: hidden; 
@@ -742,7 +757,7 @@ header::after {
     width: 4px; 
     height: 0; 
  
-    background: #ffffff; 
+    background: var(--color-principal); 
  
     z-index: 2; 
  
@@ -794,7 +809,7 @@ header::after {
     top: 30px; 
     right: 40px; 
  
-    color: #303030; 
+    color: var(--color-borde-claro); 
  
     font-family: "Space Mono", monospace; 
     font-size: 9px; 
@@ -802,7 +817,7 @@ header::after {
 } 
  
 .project-content h3 { 
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-size: 34px; 
     font-weight: 900; 
@@ -815,7 +830,7 @@ header::after {
 .project-content p { 
     max-width: 600px; 
  
-    color: #707070; 
+    color: var(--color-texto-secundario); 
  
     font-size: 14px; 
  
@@ -848,14 +863,14 @@ header::after {
 } 
  
 .project-card:hover .project-content li { 
-    border-color: #555555; 
+    border-color: var(--color-texto-terciario); 
     color: #aaaaaa; 
 } 
  
 .project-content > a { 
     width: fit-content; 
  
-    color: #ffffff; 
+    color: var(--color-principal); 
  
     font-family: "Space Mono", monospace; 
     font-size: 10px; 
@@ -864,7 +879,7 @@ header::after {
     text-transform: uppercase; 
     letter-spacing: 1.5px; 
  
-    border-bottom: 1px solid #ffffff; 
+    border-bottom: 1px solid var(--color-principal); 
  
     padding-bottom: 7px; 
  
@@ -888,9 +903,9 @@ header::after {
  
     gap: 1px; 
  
-    background: #303030; 
+    background: var(--color-borde-claro); 
  
-    border: 1px solid #303030; 
+    border: 1px solid var(--color-borde-claro); 
 } 
  
 .contact-card { 
@@ -925,7 +940,7 @@ header::after {
 } 
  
 .contact-card h3 { 
-    color: #555555; 
+    color: var(--color-texto-terciario); 
  
     font-family: "Space Mono", monospace; 
     font-size: 10px; 
@@ -937,7 +952,7 @@ header::after {
 } 
  
 .contact-card a { 
-    color: #eeeeee; 
+    color: var(--color-texto); 
  
     font-size: 15px; 
     font-weight: 600; 
@@ -950,7 +965,7 @@ header::after {
 .contact-card a::after { 
     content: " ↗"; 
  
-    color: #555555; 
+    color: var(--color-texto-terciario); 
 } 
  
 .contact-card a:hover { 
@@ -972,7 +987,7 @@ footer {
         ), 
         #030303; 
  
-    border-top: 1px solid #282828; 
+    border-top: 1px solid var(--color-borde); 
  
     display: flex; 
     align-items: center; 
@@ -1011,7 +1026,7 @@ footer div {
 } 
  
 footer a { 
-    color: #555555; 
+    color: var(--color-texto-terciario); 
  
     font-family: "Space Mono", monospace; 
     font-size: 10px; 
@@ -1023,7 +1038,7 @@ footer a {
 } 
  
 footer a:hover { 
-    color: #ffffff; 
+    color: var(--color-principal); 
 } 
  
 @media (max-width: 1100px) { 
@@ -1160,11 +1175,11 @@ body.light-mode .logo {
 }
 
 body.light-mode .logo:hover {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .nav-links a {
-    color: #555555;
+    color: var(--color-texto-terciario);
     background: transparent;
 }
 
@@ -1226,7 +1241,7 @@ body.light-mode .hero::after {
 }
 
 body.light-mode .hero-content > p:first-child {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .hero-content > p:first-child::before {
@@ -1238,7 +1253,7 @@ body.light-mode .hero h1 {
 }
 
 body.light-mode .hero h1::after {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .hero h2 {
@@ -1246,7 +1261,7 @@ body.light-mode .hero h2 {
 }
 
 body.light-mode .hero-content > p:not(:first-child) {
-    color: #555555;
+    color: var(--color-texto-terciario);
     border-left-color: #080808;
 }
 
@@ -1266,7 +1281,7 @@ body.light-mode .button:hover {
 body.light-mode .hero-buttons .button:nth-child(2) {
     background: transparent;
     color: #080808;
-    border-color: #555555;
+    border-color: var(--color-texto-terciario);
 }
 
 body.light-mode .hero-buttons .button:nth-child(2):hover {
@@ -1276,7 +1291,7 @@ body.light-mode .hero-buttons .button:nth-child(2):hover {
 }
 
 body.light-mode .social-links a {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .social-links a:hover {
@@ -1292,11 +1307,11 @@ body.light-mode .section > h2 {
 }
 
 body.light-mode .section > h2::before {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .section > p {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .about-content {
@@ -1312,7 +1327,7 @@ body.light-mode .about-text h3 {
 }
 
 body.light-mode .about-text p {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .about-text ul {
@@ -1363,7 +1378,7 @@ body.light-mode .skill-card h3 {
 }
 
 body.light-mode .skill-card p {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .projects-grid {
@@ -1393,7 +1408,7 @@ body.light-mode .project-content h3 {
 }
 
 body.light-mode .project-content p {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .project-content li {
@@ -1411,7 +1426,7 @@ body.light-mode .project-content > a:hover {
     color: #eeeeea;
     background: #080808;
     border-color: #080808;
-    box-shadow: 5px 5px 0 #555555;
+    box-shadow: 5px 5px 0 var(--color-texto-terciario);
 }
 
 body.light-mode .project-content > a::after {
@@ -1434,7 +1449,7 @@ body.light-mode .contact-card:hover {
 }
 
 body.light-mode .contact-card h3 {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .contact-card a {
@@ -1442,7 +1457,7 @@ body.light-mode .contact-card a {
 }
 
 body.light-mode .contact-card a:hover {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode .contact-card a::after {
@@ -1455,11 +1470,11 @@ body.light-mode footer {
 }
 
 body.light-mode footer p {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode footer a {
-    color: #555555;
+    color: var(--color-texto-terciario);
 }
 
 body.light-mode footer a:hover {
